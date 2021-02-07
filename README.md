@@ -4,7 +4,7 @@
 ## 책의 전반적인 내용
 
 #### [1장 스프링 초기설정](https://github.com/saechimdaeki/Spring_InAction5/tree/main/chap1)
-#### 2장 스프링 MVC를 사용한 웹 계층 개발
+#### [2장 스프링 MVC를 사용한 웹 계층 개발](https://github.com/saechimdaeki/Spring_InAction5/tree/main/chap2)
 #### 3장 스프링에서 관계형 데이터베이스에 데이터를 저장하는 방법
 #### 4장 스프링 시큐리티를 사용해서 인증하고 인가되지 않은 접근 막는방법
 #### 5장 스프링 부트 구성 속성을 사용해 어플리케이션을 구성하는 방법
