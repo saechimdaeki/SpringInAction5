@@ -6,6 +6,8 @@
 - 스프링 데이터(Spring Data)를 사용해서 JPA 선언하고 사용하기
 
 # 3-1 JDBC 사용해서 데이터 읽고 쓰기.
+[3-2 JPA로 데이터 읽고쓰기](https://github.com/saechimdaeki/Spring_InAction5/blob/main/chap3/3-2JPA%EC%82%AC%EC%9A%A9%ED%95%B4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%A0%80%EC%9E%A5%ED%95%98%EA%B3%A0%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0.md)
+
 수십년간 관계형 데이터베이스와 SQL은 데이터 퍼시스턴스의 최우선 선택으로 자리를 지켜왔다.
 
 관계형 데이터를 사용할 경우 자바 개발자들이 선택할 수 있는 몇가지 방법이 있다. 그 중 가장 많이 사용하는
