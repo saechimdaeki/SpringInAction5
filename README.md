@@ -7,7 +7,7 @@
 #### [2장 스프링 MVC를 사용한 웹 계층 개발](https://github.com/saechimdaeki/Spring_InAction5/tree/main/chap2)
 #### [3장 스프링에서 관계형 데이터베이스에 데이터를 저장하는 방법](https://github.com/saechimdaeki/Spring_InAction5/tree/main/chap3)
 #### [4장 스프링 시큐리티를 사용해서 인증하고 인가되지 않은 접근 막는방법](https://github.com/saechimdaeki/Spring_InAction5/tree/main/chap4)
-#### 5장 스프링 부트 구성 속성을 사용해 어플리케이션을 구성하는 방법
+#### [5장 스프링 부트 구성 속성을 사용해 어플리케이션을 구성하는 방법](https://github.com/saechimdaeki/Spring_InAction5/tree/main/chap5)
 #### 6장 REST API를 작성 하며 MVC에 대해 폭넓게 다룸
 #### 7장 스프링 애플리케이션에서 REST API를 사용하는 방법을 학습
 #### 8장 JMS와 RabbitMQ 및 카프카를 사용해 메시지 주고받는 비동기 통신 사용하는 방법
