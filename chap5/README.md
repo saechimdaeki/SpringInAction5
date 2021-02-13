@@ -67,7 +67,7 @@ public DataSource dataSource(){
 server.port=9090
 
 
-//ymaml사용시
+//ymal사용시
 server:
     port: 9090
 ```
