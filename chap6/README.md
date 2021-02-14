@@ -1015,10 +1015,13 @@ public class SpringDataRestConfiguration {
 ### [5]스프링 데이터 레포지토리는 스프링 데이터 REST를사용하는 REST API로 자동노출될 수 있다.
 
 
+## 실행방법
+	
+	1. mvnw clean package
+	2. cd chap6\taco-cloud\target
+	3. java -jar taco-cloud-0.0.1-SNAPSHOT.jar
 
-
-
-
+## 책과 달리 최신버젼의 스프링부트 코드로 하였으며 서브모듈을 오직 두개로하였습니다.
 
 
 
