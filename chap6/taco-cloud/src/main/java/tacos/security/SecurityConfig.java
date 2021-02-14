@@ -23,6 +23,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter  {
         .antMatchers("/design", "/orders")
           .access("hasRole('ROLE_USER')")
         .antMatchers("/", "/**").access("permitAll")
+        .antMatchers("/h2-console/**").permitAll()
         .and()
           .formLogin()
   	        .loginPage("/login")
@@ -32,7 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter  {
 
         .and()
           .csrf()
-        ;
+          .and();
 
     }
 
