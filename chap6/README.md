@@ -4,7 +4,7 @@
 - 하이퍼링크 REST 리소스 활성화하기
 - 레포지토리 기반의 REST엔드포인트 자동화
 
-## 스프링 hateoas를 책과 다른 변경사항(매우 중요)
+## 스프링최신버전 사용시 hateoas 책과 다른 변경사항
 - `ResourceSupport` changed to `RepresentationModel`
 - `Resource` changed to `EntityModel`
 - `Resources` changed to `CollectionModel`
@@ -13,7 +13,7 @@
 - `ControllerLinkBuilder` changed to `WebMvcLinkBuilder`
 - `ResourceProcessor` changed to `RepresentationModelProcessor`
 ## 이 레포지토리에서는 변경내용을 반영해 작성하겠습니다
-
+### 스프링부트 구버젼 사용할경우 변경하지 않아도 됨.
 이번 장에서는 스프링을 사용해서 타코클라우드 애플리케이션에 REST API를 제공할것이다. 이때 스프링 MVC 컨트롤러를 사용해서
 
 REST 엔드포인트를 생성하기 위해 2장에서 배웠던 MVC를 사용한다. 또한, 4장에서 정의했던 스프링 데이터 레포지토리의 REST
