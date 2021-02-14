@@ -27,6 +27,9 @@
 
 
 # 유용한 온라인 리소스
+
+## [참고]책과 달리 최신버젼의 스프링부트를 사용하며 그에 따라 달라진코드로 코딩하고있습니다.  
+
 ## [스프링 웹사이트](https://spring.io/guides)
 
 ## [스프링과 스프링부트 궁금증](https://stackoverflow.com/questions/tagged/spring)
