@@ -310,6 +310,14 @@ ingredients링크를 따라간 후에는 asLink()를 호출하여 ingredeints링
 
 postForObject()를 호출하여 새로운 식자재를 추가할 수 있다.
 
+## 실행 방법
+```
+1. ./mvnw clean package
+2. java -jar tacos/target/taco-cloud-0.0.7-SNAPSHOT.jar
+3. java -jar tacocloud-restclient/target/tacocloud-restclient-0.0.7-SNAPSHOT.jar
+```
+
+
 # 7장 요약 
 ### [1] 클라이언트는 RestTemplate을 사용해서 REST API에 대한 HTTP요청을 할 수 있다.
 
