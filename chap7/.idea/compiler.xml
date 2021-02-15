@@ -2,28 +2,30 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="taco-cloud" />
-        <module name="tacocloud-restclient" />
         <module name="tacocloud-ui" />
+        <module name="tacocloud-security" />
+        <module name="tacocloud-restclient" />
+        <module name="tacocloud-api" />
+        <module name="tacocloud-domain" />
+        <module name="tacocloud-data" />
+        <module name="tacocloud-web" />
+        <module name="taco-cloud" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="taco-cloud" target="11" />
+      <module name="taco-cloud" target="1.8" />
       <module name="taco-cloud-parent" target="1.8" />
+      <module name="tacocloud-api" target="1.8" />
+      <module name="tacocloud-data" target="1.8" />
+      <module name="tacocloud-domain" target="1.8" />
       <module name="tacocloud-restclient" target="1.8" />
+      <module name="tacocloud-security" target="1.8" />
       <module name="tacocloud-ui" target="1.8" />
+      <module name="tacocloud-web" target="1.8" />
     </bytecodeTargetLevel>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="taco-cloud" options="-parameters" />
-      <module name="tacocloud-restclient" options="-parameters" />
-      <module name="tacocloud-ui" options="-parameters" />
-    </option>
   </component>
 </project>
