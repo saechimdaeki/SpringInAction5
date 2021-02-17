@@ -1,11 +1,11 @@
-# 3장 데이터로 작업하기
+# 🥇3장 데이터로 작업하기
 
-### 이 장에서 배우는 내용
+### ㅍ이 장에서 배우는 내용
 - 스프링 JdbcTemplate 사용하기
 - SimpleJdbcInsert를 사용해서 데이터 추가하기
 - 스프링 데이터(Spring Data)를 사용해서 JPA 선언하고 사용하기
 
-# 3-1 JDBC 사용해서 데이터 읽고 쓰기.
+# 🥇3-1 JDBC 사용해서 데이터 읽고 쓰기.
 [3-2 JPA로 데이터 읽고쓰기](https://github.com/saechimdaeki/Spring_InAction5/blob/main/chap3/3-2JPA%EC%82%AC%EC%9A%A9%ED%95%B4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%A0%80%EC%9E%A5%ED%95%98%EA%B3%A0%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0.md)
 
 수십년간 관계형 데이터베이스와 SQL은 데이터 퍼시스턴스의 최우선 선택으로 자리를 지켜왔다.
@@ -20,7 +20,7 @@
 
 요구되는 모든 형식적이고 상투적인 코드없이 개발자가 관계형 데이터베이스에 대한 SQL연산을 수행할 수 있는 방법을제공한다.
 
-### 먼저 JdbcTemplate을 사용하지 않고 자바로 SQL쿼리를 수행하는 방법을 보자
+### 🌟먼저 JdbcTemplate을 사용하지 않고 자바로 SQL쿼리를 수행하는 방법을 보자
 
 ```
 @Override
@@ -77,7 +77,7 @@ SQLException은 catch 블록으로 반드시 처리해야한느 checked 예외�
 
 작성 오류가 있는 쿼리와 같은 흔한문제들은 catch블록에서 해결할 수 없으므로 현재 메소드를 상위코드로 예외처리를 넘겨야한다.
 
-### 이제 이것과 대조되는 `JdbcTemplate`사용 메소드를 보자
+### 🌟이제 이것과 대조되는 `JdbcTemplate`사용 메소드를 보자
 ```
 private JdbcTemplate jdbc;
 
@@ -104,7 +104,7 @@ private Ingredient mapRowToIngredient(ResultSet rs, int rowNum) throws SQLExcept
 
 오직 쿼리를 수행하고 그결과를 Ingredient객체로 생성하는 것에 초점을 두는 코드만 존재한다.
 
-### JdbcTemplate 사용하기
+### 🌟JdbcTemplate 사용하기
 `JdbcTemplate`사용을 위해 먼저 의존성을 추가해주자
 ```
     <dependency>
@@ -113,7 +113,7 @@ private Ingredient mapRowToIngredient(ResultSet rs, int rowNum) throws SQLExcept
 	</dependency>
 ```
 
-#### 이제 JDBC레포지토리를 정의해보자
+#### 🏭이제 JDBC레포지토리를 정의해보자
 식자재 레포지터리는 다음 연산을 수행해야 한다.
 - 데이터베이스의 모든 식자재 데이터를 쿼리하여 Ingredient객체 컬렉션에 넣어야한다
 - id를 사용해서 하나의 Ingredient를 쿼리해야한다
@@ -128,8 +128,8 @@ public interface IngredientRepository {
 }
 ```
 
-#### Ingredient 레포지토리가 해야 할 일을 IngredientRepository인터페이스에 정의하였으므로
-#### JdbcTemplate을 이용해서 z데이터베이스 쿼리에 사용할 수 있도록 IngredientRepository인터페이스를 구현해야한다.
+#### 🏭Ingredient 레포지토리가 해야 할 일을 IngredientRepository인터페이스에 정의하였으므로
+#### 🏭JdbcTemplate을 이용해서 z데이터베이스 쿼리에 사용할 수 있도록 IngredientRepository인터페이스를 구현해야한다.
 ```
 @Repository
 public class JdbcIngredientRepository {
@@ -148,7 +148,7 @@ public class JdbcIngredientRepository {
 
 즉 @Repositorty를 지정함으로써 스프링 컴포넌트 검색에서 이 클래스를 자동으로 찾아 애플리케이션컨텍스트의 빈으로 생성한다.
 
-### 이제 JdbcTemplate을 이용해 데이터베이스를 쿼리해보자.
+### 🌟이제 JdbcTemplate을 이용해 데이터베이스를 쿼리해보자.
 
 ```
 @Repository
@@ -202,7 +202,7 @@ public class JdbcIngredientRepository implements IngredientRepository{
 
 List에 저장한 후 반환한다.
 
-#### 데이터를 추가하는 save메소드를 보면 update()메소드를 사용하고 있다.
+#### 🏭데이터를 추가하는 save메소드를 보면 update()메소드를 사용하고 있다.
 
 JdbcTemplate의 update()메소드는 데이터베이스에 데이터를 추가하거나 변경하는 어떤 쿼리에도 사용될 수 있다.
 
@@ -236,7 +236,7 @@ private final IngredientRepository ingredientRepo;
 ```
 ----
 
-### 스키마 정의하고 데이터 추가하기
+### 🌟스키마 정의하고 데이터 추가하기
 Ingredient 테이블 외에도 주문정보와 타코 디자인정보를 저장할 테이블들이 필요하고 
 다음처럼 테이블을 작성할예정이다.
 
@@ -248,7 +248,7 @@ Ingredient 테이블 외에도 주문정보와 타코 디자인정보를 저장�
 - Taco_Order: 주문 정보를 저장
 - Taco_Order_Tacos: Taco_Order와 Taco테이블간의 관계를 나타내며 Taco_Order테이블의 각행에 대해 하나이상 행포함.
 
-### JdbcTemplate을 사용해서 데이터를 저장하는 방법은 다음 두 가지가 있다.
+### 🌟JdbcTemplate을 사용해서 데이터를 저장하는 방법은 다음 두 가지가 있다.
 - 직접 update()메소드를 사용
 - SimpleJdbcInsert 래퍼 클래스를 사용한다.
 
@@ -322,7 +322,7 @@ newPreparedStatemnetCreator()를 호출하며 이때 PreparedStatementCreatorFac
 
 ---
 
-### 이제 이를 사용할 컨트롤러를 수정해보자
+### 🌟이제 이를 사용할 컨트롤러를 수정해보자
 ```
 @Slf4j @Controller
 @RequestMapping("/design")
@@ -385,7 +385,7 @@ public class DesignTacoController {
 
 수정한 컨트롤러 코드는 다음과 같다. @ModelAttribute애노테이션은 Order객체가 모델에 생성되도록 해준다.
 
-### 그러나 하나의 세션에서 생성되는 Taco객체와 다르게
+### 🌟그러나 하나의 세션에서 생성되는 Taco객체와 다르게
 
 주문은 다수의 HTTP요청에 걸쳐 존재해야 한다. 다수의 타코를 생성하고 그것들을 하나의 주문으로 추가할 수 있게 하기 위해서이다.
 
@@ -401,11 +401,11 @@ public class DesignTacoController {
 
 
 ---- 
-## SimpleJdbcInsert를 사용해 데이터 추가하기.
+## 💕SimpleJdbcInsert를 사용해 데이터 추가하기.
 
-### 앞서 복잡한 PreparedStatementCreator를 보았을것이다.
+### 🌟앞서 복잡한 PreparedStatementCreator를 보았을것이다.
 
-#### `SimpleJdbcInsert`는 데이터를 더 쉽게 테이블에 추가하기위해 JdbcTemplate을 래핑한 객체이다.
+#### 🏭`SimpleJdbcInsert`는 데이터를 더 쉽게 테이블에 추가하기위해 JdbcTemplate을 래핑한 객체이다.
 ```
 @Repository
 public class JdbcOrderRepository implements OrderRepository{
@@ -490,7 +490,7 @@ public class IngredientByIdConverter implements Converter<String, Ingredient>{
 }
 ```
 
-##### IngredientByIdConverter 클래스에는 @Component 애노테이션을 지정했으므로 스프링에 의해 자동 생성 및 주입되는 빈으로 생성된다
+##### 🏭IngredientByIdConverter 클래스에는 @Component 애노테이션을 지정했으므로 스프링에 의해 자동 생성 및 주입되는 빈으로 생성된다
 
 `Converter< String,Ingredient>`에서 String은 변환할 값의 타입이고 Ingredient는 변환된 값의 타입이다.
 
@@ -504,8 +504,8 @@ public class IngredientByIdConverter implements Converter<String, Ingredient>{
 
 ---
 
-### SimpleJdbcInsert와 더불어 스프링의 JdbcTemplate은 일반적인 JDBC보다
+### 🌟SimpleJdbcInsert와 더불어 스프링의 JdbcTemplate은 일반적인 JDBC보다
 
-### 훨 씬 더 쉽게 관계형 데이터 베이스를 사용하도록 해준다.
+### 🌟훨 씬 더 쉽게 관계형 데이터 베이스를 사용하도록 해준다.
 
-## 그러나 `스프링 데이터 JPA`는 더욱 쉽게 해준다는 것을 3-2.md에서보자!
+## 💕그러나 `스프링 데이터 JPA`는 더욱 쉽게 해준다는 것을 3-2.md에서보자!

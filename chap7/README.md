@@ -1,10 +1,10 @@
-# 7장 REST서비스 사용하기
+# 🥇7장 REST서비스 사용하기
 
-### 6장과 달리 이 장부터는.. 후에 있을 마이크로서비스 아키텍쳐
+### 🌟6장과 달리 이 장부터는.. 후에 있을 마이크로서비스 아키텍쳐
 
-### 공부를 위해 책대로 서브모듈을 나누되 최신버젼의 코드로 마이그레이션했습니다.
+### 🌟공부를 위해 책대로 서브모듈을 나누되 최신버젼의 코드로 마이그레이션했습니다.
 
-### 이 장에서 배우는 내용
+### 🌟이 장에서 배우는 내용
 - `RestTemplate`을 사용해서 Rest API 사용하기
 - `Traverson`을 사용해서 하이퍼미디어 API 이동하기
 
@@ -20,16 +20,16 @@ REST API 클라이언트를 작성하고 사용하는 방법을 알아본다. �
 
 그러므로 다른 REST API와 상호작용하는 방법을 알아 둘 필요가있다. 스프링은 다음과 같은 방법을 사용해 REST API를 사용할수있다.
 
-#### [1] RestTemplate : 스프링 프레임워크에서 제공하는 간단하고 동기화된 REST 클라이언트
-#### [2] Traverson: 스프링 HATEOAS에서 제공하는 하이퍼링크를 인식하는 동기화 REST 클라이언트로
+#### 🏭[1] RestTemplate : 스프링 프레임워크에서 제공하는 간단하고 동기화된 REST 클라이언트
+#### 🏭[2] Traverson: 스프링 HATEOAS에서 제공하는 하이퍼링크를 인식하는 동기화 REST 클라이언트로
 
 #### 같은 이름의 자바스크립트 라이브러리로부터 비롯된 것이다.
 
-#### [3] WebClient: 스프링 5에서 소개된 반응형 비동기 REST클라이언트
+#### 🏭[3] WebClient: 스프링 5에서 소개된 반응형 비동기 REST클라이언트
 
 하지만 WebClient는 11장 스프링 반응형 웹 프레임워크에서 알아볼것이다.!
 
-### RestTemplate으로 REST엔드포인트 사용하기
+### 🌟RestTemplate으로 REST엔드포인트 사용하기
 
 클라이언트 입장에서 REST리소스와 상호작용하려면 해야 할 일이 많아서 코드가 장황해진다.
 
@@ -47,7 +47,7 @@ JDBCTemplate이 처리하듯이, RestTemplate은 REST리소스를 사용하는�
 
 나머지는 이 메소드들의 오버로딩된 버젼이다.
 
-## RestTemplate이 정의하는 고유한 작업을 수행하는 12개의 메소드
+## 💕RestTemplate이 정의하는 고유한 작업을 수행하는 12개의 메소드
 
 |메소드|기능 설명|
 |:-|:-|
@@ -91,7 +91,7 @@ public RestTemplate restTemplate(){
 }
 ```
 
-### 리소스 가져오기 (GET)
+### 🌟리소스 가져오기 (GET)
 
 타코 클라우드 API로부터 식자재를 가져온다고 해보자. 만일 해당 API에 HATEOAS가 활성화 되지 않았다면 getForObjetc()를
 
@@ -162,7 +162,7 @@ getForEntity()메소드는 getForObject()와 동일한 매개변수를 갖도록
 
 따라서 URL 변수들을 가변 인자 리스트나 URI객체로 전달하여 getForEntity()를 호출할 수 있다.
 
-### 리소스 쓰기
+### 🌟리소스 쓰기
 
 HTTP PUT 요청을 전송하기 위해 RestTemplate은 put()메소드를 제공한다. 이 메소드는 3개의 오버로딩된 버전이 있으며,
 
@@ -182,7 +182,7 @@ public void update(Ingredient ingredient){
 
 put()메소드는 Ingredient 객체 자체를 전송하며, 반환 타입은 void이므로 이 메소드의 반환값을 처리할 필요는 없다.
 
-### 리소스 삭제하기
+### 🌟리소스 삭제하기
 
 타코 클라우드에서 특정 식자재를 더이상 제공하지 않으므로 해당 식자재를 완전히 삭제하고 싶다면 RestTemplate의 delete()메소드를 호출하면된다
 
@@ -197,7 +197,7 @@ public void deleteIngredient(Ingredient ingredient){
 
 URL은 Map으로 된 URL 매개변수나 URI객체로 지정될 수 있다.
 
-### 리소스 데이터 추가하기
+### 🌟리소스 데이터 추가하기
 
 새로운 식자재를 타코 클라우드 메뉴에 추가한다고 해보자. 이때는 요청 몸체에 식자재 데이터를 갖는 HTTP POST요청을 .../ingredients
 
@@ -243,7 +243,7 @@ RestTemplate 메소드들의 용도는 다르지만 사용하는 방법은 매�
 
 이때는 `Traverson`과 같은 클라이언트 라이브러리를 사용하는것이 좋다!
 
-## Traverson으로 REST API 사용하기
+## 💕Traverson으로 REST API 사용하기
 `Traverson`은 스프링 데이터 HATEOAS에 같이 제공되며, 스프링 애플리케이션에서 하이퍼 미디어 API를  사용할 수 있는 솔루션이다.
 
 `Traverson`을 사용할 때는 우선 해당 API의 기본 URI를 갖는 객체를 생성해야 한다.
@@ -287,7 +287,7 @@ ParameterizedTypeReference<CollectionModel<Ingredient>> ingredientType=
 
 삭제할수있지만 API를 이동하는것은 쉽지 않다.
 
-### 따라서 API의 이동과 리소스의 변경이나 삭제 모두를 해야한다면 RestTemplate과 Traverson을 함께써야한다.
+### 🌟따라서 API의 이동과 리소스의 변경이나 삭제 모두를 해야한다면 RestTemplate과 Traverson을 함께써야한다.
 
 Traverson은 새로운 리소스가 생성될 링크로 이동할 때도 사용할 수 있으며, 이동한다음에는 해당 링크를 RestTemplate에 지정하여 
 
@@ -310,7 +310,7 @@ ingredients링크를 따라간 후에는 asLink()를 호출하여 ingredeints링
 
 postForObject()를 호출하여 새로운 식자재를 추가할 수 있다.
 
-## 실행 방법
+## 💕실행 방법
 ```
 1. ./mvnw clean package
 2. java -jar tacos/target/taco-cloud-0.0.7-SNAPSHOT.jar
@@ -318,10 +318,10 @@ postForObject()를 호출하여 새로운 식자재를 추가할 수 있다.
 ```
 
 
-# 7장 요약 
-### [1] 클라이언트는 RestTemplate을 사용해서 REST API에 대한 HTTP요청을 할 수 있다.
+# 🥇7장 요약 
+### 🌟[1] 클라이언트는 RestTemplate을 사용해서 REST API에 대한 HTTP요청을 할 수 있다.
 
-### [2] Traverson을 사용하면 클라이언트가 응답에 포함된 하이퍼링크를 사용해서 원하는 API로이동할수있다.
+### 🌟[2] Traverson을 사용하면 클라이언트가 응답에 포함된 하이퍼링크를 사용해서 원하는 API로이동할수있다.
 
 
 

@@ -1,10 +1,10 @@
-# 6장 REST 서비스 생성하기
-## 이 장에서 배우는 내용
+# 🥇6장 REST 서비스 생성하기
+## 💕이 장에서 배우는 내용
 - 스프링 MVC에서 REST 엔드포인트 정의하기
 - 하이퍼링크 REST 리소스 활성화하기
 - 레포지토리 기반의 REST엔드포인트 자동화
 
-## 스프링최신버전 사용시 hateoas 책과 다른 변경사항
+## 💕스프링최신버전 사용시 hateoas 책과 다른 변경사항
 - `ResourceSupport` changed to `RepresentationModel`
 - `Resource` changed to `EntityModel`
 - `Resources` changed to `CollectionModel`
@@ -12,21 +12,21 @@
 - `ResourceAssembler` changed to `RepresentationModelAssembler`
 - `ControllerLinkBuilder` changed to `WebMvcLinkBuilder`
 - `ResourceProcessor` changed to `RepresentationModelProcessor`
-## 이 레포지토리에서는 변경내용을 반영해 작성하겠습니다
-### 스프링부트 구버젼 사용할경우 변경하지 않아도 됨.
+## 💕이 레포지토리에서는 변경내용을 반영해 작성하겠습니다
+### 🌟스프링부트 구버젼 사용할경우 변경하지 않아도 됨.
 이번 장에서는 스프링을 사용해서 타코클라우드 애플리케이션에 REST API를 제공할것이다. 이때 스프링 MVC 컨트롤러를 사용해서
 
 REST 엔드포인트를 생성하기 위해 2장에서 배웠던 MVC를 사용한다. 또한, 4장에서 정의했던 스프링 데이터 레포지토리의 REST
 
 엔드포인트도 외부에서 사용할 수 있게 자동으로 노출시킨다. 마지막으로, 그런 엔드포인트를 테스트하고 안전하게 만드는 법을 알아본다
 
-## REST컨트롤러 작성하기
+## 💕REST컨트롤러 작성하기
 
 이 책에서는 앵귤러 프레임워크를 사용해서 SPA로 프론트엔드를 구축한다. 이책의 목적은 앵귤러가아니므로 핵심은 백엔드
 
 스프링 코드에 초점을 둘 것이다.
 
-### 서버에서 데이터 가져오기
+### 🌟서버에서 데이터 가져오기
 
 가장 최근에 생성된 타코를 보여주는 RecentTacosComponent를 앵귤러 코드에 정의하였다.
 ```
@@ -184,7 +184,7 @@ HTTPPie를 사용할때는 다음과 같다
 
     $ http :8080/design/recent
 
-### 서버에 데이터 전송하기 
+### 🌟서버에 데이터 전송하기 
 
 앵귤러 코드는 생략한다. 타코디자인 데이터를 요청하고 저장하는 메소드를 DesignTacoController에 추가하자.
 ```
@@ -217,7 +217,7 @@ postTaco()메소드에는 @ResponseStatus(HttpStatus.CREATED) 애노테이션도
 
 HTTP상태코드를 전달하는 것이 좋다.
 
-### 서버의 데이터 변경하기
+### 🌟서버의 데이터 변경하기
 
 데이터를 변경하기 위한 HTTP메소드로는 PUT과 PATCH가 있다. 왜 두개가 있는지 이유를 알고 컨트롤러를 작성하는게 중요하다
 
@@ -285,7 +285,7 @@ putOrder()메소드의 경우 HTTP PUT의 의미대로 한 주문의 전체 데�
 
 이방법을 사용하면 클라이언트에서 변경할 속성만 전송하면 된다. 그리고 서버에서는 클라이언트에서 지정하지 않은 속성의 기존데이터를 보관할수있다.
 
-### 서버에서 데이터 삭제하기 
+### 🌟서버에서 데이터 삭제하기 
 
 데이터를 그냥 삭제할 때는 클라이언트에서 HTTP DELETE 요청으로 삭제를 요청하면 된다. 이때는 DELETE 요청을 처리하는 메소드에
 
@@ -313,7 +313,7 @@ EmptyResultDataAccessException이 발생된다.
 
 따라서 대개의 경우 DELETE요청의 응답은 몸체 데이터를 갖지 않으며, 반환 데이터가 없다는 것을 클라이언트가 알 수 있게 HTTP상태 코드를 사용한다.
 
-## 하이퍼미디어 사용하기
+## 💕하이퍼미디어 사용하기
 
 API 클라이언트 코드에서는 흔히 하드코딩된 URL패턴을 사용하고 문자열로 처리한다. 그러나 API의 URL스킴이 변경되면 어떻게될까?
 
@@ -388,7 +388,7 @@ REST API를 구현하는 또 다른 방법으로 HATEOAS가 있다. 이것은 AP
 
 해당 리소스에 링크를 추가하는데 사용할 수 있는 클래스와 리소스 어셈블러를 제공한다.
 
-### 하이퍼링크 추가하기
+### 🌟하이퍼링크 추가하기
 
 `스프링 HATEOAS`는 하이퍼링크 리소스를 나타내는 두 개의 기본타입인 `Resource`와 `Resources`를 제공한다.
 
@@ -468,7 +468,7 @@ recentResources.add(WebMvcLinkBuilder.linkTo(DesignTacoController.class)
 
 따라서 해당 컨트롤러의 기본 경로와 recentTacos()의 매핑 경로 모두를 결정하는데 사용한다. 이제 URL의모든값을얻어 하드코딩하지않아도된다.
 
-### 리소스 어셈블러 사용하기
+### 🌟리소스 어셈블러 사용하기
 
 이제 리스트에 포함된 각 타코 리소스에 대한 링크를 추가해야한다. 이때 한가지 방법은 반복루프에서 Resources객체가 가지는 각
 
@@ -609,14 +609,14 @@ public class IngredientResourceAssembler extends RepresentationModelAssemblerSup
 }
 ```
 
-## p.s. 
+## 💕p.s. 
 tocollectionModel  즉 책에서의 toResources에 관해서는 책에는 물론 이책의 필자의 깃허브에도 어떠한 자료도 없다.
 어떻게 사용하는지 의문인 상황..  
 
-일단 공부를위해 TacoResources의 List를 CollectionModel로 변경을 시켜놓았다.
+일단 공부를위해 TacoResources의 List를 CollectionModel로 변경을 시켜놓았다. 최신버전에는 이렇게 해야한다!! 
 
 
-### embedded관계 이름 짓기
+### 🌟embedded관계 이름 짓기
 ```
 {
     "_embedded":{
@@ -665,7 +665,7 @@ API의 URL스킴이 변경되면 클라이언트 코드 실행이 중단됨에�
 
 만일 스프링 데이터를 레포지토리로 사용한다면 또 다른방법도있다.
 
-### 데이터 기반 서비스 활성화하기
+### 🌟데이터 기반 서비스 활성화하기
 
 스프링 데이터는 우리가 코드에 정의한 인터페이스를 기반으로 레포지토리 구현체를 자동으로 생성하고 필요한 기능을 수행한다.
 
@@ -862,7 +862,7 @@ spring:
 
 /api/ingredients 엔드포인트를 노출시켰는데 taco와 TacoRepository의 경우 노출시키지 않는 이유는 무엇일까?
 
-### 리소스 경로와 관계이름 조정하기
+### 🌟리소스 경로와 관계이름 조정하기
 
 실제로는 스프링 데이터 REST는 tacos라는 엔드포인트를 제공한다. 그러나 엔드포인트를 노출하는 방법이 문제다.
 
@@ -882,7 +882,7 @@ public class Taco {
 
 `RestResource`애노테이션을 지정하면 관계이름과 경로를 우리가 원하는 것으로 변경할 수 있다. 
 
-### 페이징과 정렬
+### 🌟페이징과 정렬
 
 모든 링크는 선택적 매개변수인 page, size, sort를 제공한다.
 
@@ -898,7 +898,7 @@ public class Taco {
 
     $ curl "localhost:8080/api/tacos?sort=createdAt,desc&page=0&size=12"
 
-### 커스텀 엔드포인트 추가하기
+### 🌟커스텀 엔드포인트 추가하기
 
 스프링 데이터 REST는 스프링 데이터 레포지토리의 CRUD 작업을 수행하는 엔드포인트 생성을 잘 하도록한다. 하지만 때로는 
 
@@ -965,7 +965,7 @@ public class RecentTacosController {
 
 요청할 때는 여전히 하이퍼링크 리스트에 나타나지않을것이다.. 이걸 해결해야한다!
 
-### 커스텀 하이퍼링크를 스프링 데이터 엔드포인트에 추가하기
+### 🌟커스텀 하이퍼링크를 스프링 데이터 엔드포인트에 추가하기
 
 최근에 생성된 타코의 엔드포인트가 /api/tacos에서 반환된 하이퍼링크 중에 없다면 클라이언트가 가장 최근  타코들을 가져오는
 
@@ -997,31 +997,31 @@ public class SpringDataRestConfiguration {
 
 이경우 PagedNodel< EntityModel< Taco>>가 반환되면 가장 최근에 생성된 타코들의 링크를 받게되며 /api/tacos요청응답에도 해당 링크들이 포함된다.
 
-# 6장 요약
-### [1] REST엔드포인트는 스프링 MVC, 그리고 브라우저 지향의 컨트롤러와 동일한 프로그래밍
+# 🥇6장 요약
+### [🌟1] REST엔드포인트는 스프링 MVC, 그리고 브라우저 지향의 컨트롤러와 동일한 프로그래밍
 
 ### 모델을 따르는 컨트롤러로 생성할 수 있다.
 
-### [2] 모델과 뷰를 거치지않고 요청 응답 몸체에 직접 데이터를 쓰기 위해 컨트롤러의 핸들러 메소드에는 
+### 🌟[2] 모델과 뷰를 거치지않고 요청 응답 몸체에 직접 데이터를 쓰기 위해 컨트롤러의 핸들러 메소드에는 
 
 ### @ResponseBody애노테이션을 지정할 수 있으며, ResponseEntity객체를 반환할수있다
 
-### [3] @RestController애노테이션을 컨트롤러에 지정하면 해당 컨트롤러의 각 핸들러
+### 🌟[3] @RestController애노테이션을 컨트롤러에 지정하면 해당 컨트롤러의 각 핸들러
 
 ### 메소드에 @ResponseBody를 지정하지 않아도 되므로 컨트롤러를 단순화해준다
 
-### [4] 스프링 HATEOAS는 스프링 MVC에서 반환되는 리소스의 하이퍼링크를 추가할 수 있게한다.
+### 🌟[4] 스프링 HATEOAS는 스프링 MVC에서 반환되는 리소스의 하이퍼링크를 추가할 수 있게한다.
 
-### [5]스프링 데이터 레포지토리는 스프링 데이터 REST를사용하는 REST API로 자동노출될 수 있다.
+### 🌟[5]스프링 데이터 레포지토리는 스프링 데이터 REST를사용하는 REST API로 자동노출될 수 있다.
 
 
-## 실행방법
+## 💕실행방법
 	
 	1. mvnw clean package
 	2. cd chap6\taco-cloud\target
 	3. java -jar taco-cloud-0.0.1-SNAPSHOT.jar
 
-## 책과 달리 최신버젼의 스프링부트 코드로 하였으며 서브모듈을 오직 두개로하였습니다.
+## 💕책과 달리 최신버젼의 스프링부트 코드로 하였으며 서브모듈을 오직 두개로하였습니다.
 
 
 
