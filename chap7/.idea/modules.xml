@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/taco-cloud/taco-cloud.iml" filepath="$PROJECT_DIR$/taco-cloud/taco-cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tacos/taco-cloud.iml" filepath="$PROJECT_DIR$/tacos/taco-cloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/taco-cloud-parent.iml" filepath="$PROJECT_DIR$/taco-cloud-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tacocloud-api/tacocloud-api.iml" filepath="$PROJECT_DIR$/tacocloud-api/tacocloud-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tacocloud-data/tacocloud-data.iml" filepath="$PROJECT_DIR$/tacocloud-data/tacocloud-data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tacocloud-domain/tacocloud-domain.iml" filepath="$PROJECT_DIR$/tacocloud-domain/tacocloud-domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/tacocloud-restclient/tacocloud-restclient.iml" filepath="$PROJECT_DIR$/tacocloud-restclient/tacocloud-restclient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tacocloud-security/tacocloud-security.iml" filepath="$PROJECT_DIR$/tacocloud-security/tacocloud-security.iml" />
       <module fileurl="file://$PROJECT_DIR$/tacocloud-ui/tacocloud-ui.iml" filepath="$PROJECT_DIR$/tacocloud-ui/tacocloud-ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tacocloud-web/tacocloud-web.iml" filepath="$PROJECT_DIR$/tacocloud-web/tacocloud-web.iml" />
     </modules>
   </component>
 </project>

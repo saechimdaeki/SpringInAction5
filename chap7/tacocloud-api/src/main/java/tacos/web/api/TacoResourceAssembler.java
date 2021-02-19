@@ -1,24 +1,24 @@
 package tacos.web.api;
 
-import org.springframework.hateoas.mvc.ResourceAssemblerSupport;
 
+import org.springframework.hateoas.server.mvc.RepresentationModelAssemblerSupport;
 import tacos.Taco;
 
-public class TacoResourceAssembler
-       extends ResourceAssemblerSupport<Taco, TacoResource> {
+public class TacoResourceAssembler extends RepresentationModelAssemblerSupport<Taco, TacoResource> {
 
   public TacoResourceAssembler() {
     super(DesignTacoController.class, TacoResource.class);
   }
-  
+
   @Override
-  protected TacoResource instantiateResource(Taco taco) {
-    return new TacoResource(taco);
+  protected TacoResource instantiateModel(Taco entity) {
+    return new TacoResource(entity);
   }
 
   @Override
-  public TacoResource toResource(Taco taco) {
-    return createResourceWithId(taco.getId(), taco);
+  public TacoResource toModel(Taco entity) {
+    return createModelWithId(entity.getId(), entity);
   }
+
 
 }

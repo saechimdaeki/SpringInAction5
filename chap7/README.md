@@ -313,8 +313,8 @@ postForObject()를 호출하여 새로운 식자재를 추가할 수 있다.
 ## 💕실행 방법
 ```
 1. ./mvnw clean package
-2. java -jar tacos/target/taco-cloud-0.0.7-SNAPSHOT.jar
-3. java -jar tacocloud-restclient/target/tacocloud-restclient-0.0.7-SNAPSHOT.jar
+2. java -jar tacos/target/taco-cloud-0.0.1-SNAPSHOT.jar
+3. java -jar tacocloud-restclient/target/tacocloud-restclient-0.0.1-SNAPSHOT.jar
 ```
 
 

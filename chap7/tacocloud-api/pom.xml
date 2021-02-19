@@ -13,7 +13,7 @@
 	<parent>
 		<groupId>sia</groupId>
   	<artifactId>taco-cloud-parent</artifactId>
-		<version>0.0.7-SNAPSHOT</version>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
 	<properties>
