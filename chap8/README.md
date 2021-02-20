@@ -2,7 +2,6 @@
 
 ### 🌟이 장에서 배우는 내용
 - 비동기 메시지 전송
-다.
 - JMS,RabbitMQ,카프카(Kafka)를 사용해서 메시지 전송하기
 - 브로커에서 메시지 가져오기
 - 메시지 리스닝하기
@@ -1084,12 +1083,14 @@ public void handle(Order order, Message<Order> message){
 이것은 handle()의 매개변수로 직접 Order객체를 요청하는 대신 ConsumerRecord나 Message 객체를 통해 Order객체를 요청할수있음을 의미한다..
 
 ## 💕실행 방법
+
 ```
+
 1. ./mvnw clean package
 2. java -jar tacos/target/taco-cloud-0.0.1-SNAPSHOT.jar
 3. java -jar tacocloud-kitchen/target/tacocloud-kitchen-0.0.1-SNAPSHOT.jar
 
-```
+```
 
 
 # 🥇 8장 요약 
