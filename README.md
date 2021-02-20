@@ -13,7 +13,7 @@
 #### [6장 REST API를 작성 하며 MVC에 대해 폭넓게 다룸](https://github.com/saechimdaeki/Spring_InAction5/tree/main/chap6)
 #### [7장 스프링 애플리케이션에서 REST API를 사용하는 방법을 학습](https://github.com/saechimdaeki/Spring_InAction5/tree/main/chap7)
 #### [8장 JMS와 RabbitMQ 및 카프카를 사용해 메시지 주고받는 비동기 통신 사용하는 방법](https://github.com/saechimdaeki/Spring_InAction5/tree/main/chap8)
-#### [9장 spring integration 프로젝트를 사용해 declarative 애플리케이션 통합 방법]((https://github.com/saechimdaeki/Spring_InAction5/tree/main/chap9))
+#### [9장 spring integration 프로젝트를 사용해 declarative 애플리케이션 통합 방법](https://github.com/saechimdaeki/Spring_InAction5/tree/main/chap9)
 #### 10장 프로젝트 리액터를 사용한 리액티브 프로그래밍의 핵심
 #### 11장 스프링 WebFlux.
 #### 12장 카산드라와 몽고디비에 데이터를 읽거나 쓰기위해 스프링 데이터로 리액티브 데이터 퍼시스턴스 작성하는 방법
