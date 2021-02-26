@@ -17,7 +17,7 @@
 #### [10장 프로젝트 리액터를 사용한 리액티브 프로그래밍의 핵심 ](https://github.com/saechimdaeki/SpringInAction5/tree/main/chap10)
 #### [11장 스프링 WebFlux.](https://github.com/saechimdaeki/SpringInAction5/tree/main/chap11)
 #### [12장 카산드라와 몽고디비에 데이터를 읽거나 쓰기위해 스프링 데이터로 리액티브 데이터 퍼시스턴스 작성하는 방법](https://github.com/saechimdaeki/SpringInAction5/tree/main/chap12)
-#### 13장 서비스 발견(스프링 기반의 micro service 넷플릭스의 유레카 서비스 사용)
+#### [13장 서비스 발견(스프링 기반의 micro service 넷플릭스의 유레카 서비스 사용)](https://github.com/saechimdaeki/SpringInAction5/tree/main/chap13)
 #### 14장 구성서버를 사용해 중앙 집중식으로 애플리케이션 구성을 처리하는 방법
 #### 15장 마이크로서비스를 보다 장애에 탄력적이 되도록 하는 서킷브레이커 패턴을 Hystrix로 적용하는 방법
 #### 16장 스프링 부트 Actuator.
