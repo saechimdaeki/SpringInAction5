@@ -116,7 +116,7 @@ public class DesignTacoController{
 ```
 @GetMapping("/recent")
 public Flux<Taco> recentTacos(){
-    return Flux.fromIterable(tacoRepo.findAll()).taoke(12);
+    return Flux.fromIterable(tacoRepo.findAll()).take(12);
 }
 ```
 
