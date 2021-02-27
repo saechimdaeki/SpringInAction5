@@ -636,9 +636,9 @@ public class IngredientController{
 5. cd ingredient-client
 6. ./mvnw clean package
 
-7. java -jar target/demo-0.0.1-SNAPSHOT.jar
-8. java -jar target/demo-0.0.1-SNAPSHOT.jar
-9. java -jar -Dspring.profiles.active=webclient target/demo-0.0.1-SNAPSHOT.jar
+7. java -jar target/demo-0.0.1-SNAPSHOT.jar   (service-registry)
+8. java -jar target/demo-0.0.1-SNAPSHOT.jar   (ingredient-service)
+9. java -jar -Dspring.profiles.active=webclient target/demo-0.0.1-SNAPSHOT.jar (ingredient-client)
 
 ^__^
 ```
