@@ -18,9 +18,9 @@
 #### [11장 스프링 WebFlux.](https://github.com/saechimdaeki/SpringInAction5/tree/main/chap11)
 #### [12장 카산드라와 몽고디비에 데이터를 읽거나 쓰기위해 스프링 데이터로 리액티브 데이터 퍼시스턴스 작성하는 방법](https://github.com/saechimdaeki/SpringInAction5/tree/main/chap12)
 #### [13장 서비스 발견(스프링 기반의 micro service 넷플릭스의 유레카 서비스 사용)](https://github.com/saechimdaeki/SpringInAction5/tree/main/chap13)
-#### 14장 구성서버를 사용해 중앙 집중식으로 애플리케이션 구성을 처리하는 방법
-#### 15장 마이크로서비스를 보다 장애에 탄력적이 되도록 하는 서킷브레이커 패턴을 Hystrix로 적용하는 방법
-#### 16장 스프링 부트 Actuator.
+#### [14장 구성서버를 사용해 중앙 집중식으로 애플리케이션 구성을 처리하는 방법](https://github.com/saechimdaeki/SpringInAction5/tree/main/chap14)
+#### [15장 마이크로서비스를 보다 장애에 탄력적이 되도록 하는 서킷브레이커 패턴을 Hystrix로 적용하는 방법](https://github.com/saechimdaeki/SpringInAction5/tree/main/chap15)
+#### [16장 스프링 부트 Actuator.](https://github.com/saechimdaeki/SpringInAction5/tree/main/chap16)
 #### 17장 스프링 부트 admin을 사용해 브라우저 기반의 사용자 친화적 관리 애플리케이션을 Actuator의 상위계층에 작성하는 방법
 #### 18장 스프링 빈을 JMX MBeans로 노출시키고 사용하는 방법
 #### 19장 스프링 애플리케이션을 다양한 프로덕션 환경에 배포하는 방법
