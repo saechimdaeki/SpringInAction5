@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/chap17.iml" filepath="$PROJECT_DIR$/.idea/chap17.iml" />
+      <module fileurl="file://$PROJECT_DIR$/taco-service/demo.iml" filepath="$PROJECT_DIR$/taco-service/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-server/demo (1).iml" filepath="$PROJECT_DIR$/config-server/demo (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/turbine-server/demo (2).iml" filepath="$PROJECT_DIR$/turbine-server/demo (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-registry/demo (3).iml" filepath="$PROJECT_DIR$/service-registry/demo (3).iml" />
+      <module fileurl="file://$PROJECT_DIR$/boot-admin-server/demo (4).iml" filepath="$PROJECT_DIR$/boot-admin-server/demo (4).iml" />
+      <module fileurl="file://$PROJECT_DIR$/hystrix-dashboard/demo (5).iml" filepath="$PROJECT_DIR$/hystrix-dashboard/demo (5).iml" />
+      <module fileurl="file://$PROJECT_DIR$/ingredient-client/demo (6).iml" filepath="$PROJECT_DIR$/ingredient-client/demo (6).iml" />
+      <module fileurl="file://$PROJECT_DIR$/ingredient-service/demo (7).iml" filepath="$PROJECT_DIR$/ingredient-service/demo (7).iml" />
+    </modules>
+  </component>
+</project>
